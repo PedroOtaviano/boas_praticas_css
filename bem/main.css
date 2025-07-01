@@ -1,0 +1,95 @@
+:root {
+    --primary: #4f8cff;
+    --secondary: #f5f7fa;
+    --accent: #ffe082;
+    --text: #222;
+    --muted: #555;
+    --footer-bg: #2d3a4a;
+    --footer-text: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--secondary);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    background: var(--primary);
+    color: #fff;
+    padding: 24px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+}
+
+.cabecalho__titulo {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.produtos {
+    display: flex;
+    gap: 24px;
+    padding: 32px 16px;
+    justify-content: center;
+}
+
+.produtos__item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    width: 180px;
+    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.07);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.produtos__item:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(79, 140, 255, 0.13);
+    background: var(--accent);
+    border: 2px solid var(--primary);
+}
+
+.produtos__item--destaque {
+    border: 2px solid var(--primary);
+    background: var(--accent);
+}
+
+.produtos__imagem {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    background: #e3eaff;
+}
+
+.produtos__nome {
+    font-size: 1.15em;
+    margin: 16px 0 8px 0;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.produtos__descricao {
+    color: var(--muted);
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.rodape {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0 12px 0;
+    margin-top: 40px;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+}
