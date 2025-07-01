@@ -1,25 +1,5 @@
-:root {
-    --primary: #4f8cff;
-    --secondary: #f5f7fa;
-    --accent: #ffe082;
-    --text: #222;
-    --muted: #555;
-    --footer-bg: #2d3a4a;
-    --footer-text: #fff;
-}
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--secondary);
-    color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
 .cabecalho {
-    background: var(--primary);
+    background: #4f8cff;
     color: #fff;
     padding: 24px 0;
     text-align: center;
@@ -30,6 +10,12 @@ body {
     margin: 0;
     font-size: 2rem;
     letter-spacing: 1px;
+}
+
+.cabecalho__descricao {
+    margin: 8px 0 0 0;
+    font-size: 1.1rem;
+    color: #e3eaff;
 }
 
 .produtos {
@@ -47,18 +33,21 @@ body {
     width: 180px;
     box-shadow: 0 2px 8px rgba(79, 140, 255, 0.07);
     transition: transform 0.15s, box-shadow 0.15s;
+    border: 2px solid transparent;
 }
 
 .produtos__item:hover {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 6px 16px rgba(79, 140, 255, 0.13);
-    background: var(--accent);
-    border: 2px solid var(--primary);
+    background: #c9d3e5;;
+    border: 2px solid #4f8cff;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
 }
 
 .produtos__item--destaque {
-    border: 2px solid var(--primary);
-    background: var(--accent);
+    border: 2px solid #4f8cff;
+    background: #ffe082;
 }
 
 .produtos__imagem {
@@ -66,30 +55,36 @@ body {
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid var(--primary);
+    border: 3px solid #4f8cff;
     background: #e3eaff;
 }
 
 .produtos__nome {
     font-size: 1.15em;
     margin: 16px 0 8px 0;
-    color: var(--primary);
+    color: #4f8cff;
     font-weight: 600;
 }
 
 .produtos__descricao {
-    color: var(--muted);
+    color: #555;
     font-size: 1em;
     margin-bottom: 0;
 }
 
 .rodape {
-    background: var(--footer-bg);
-    color: var(--footer-text);
+    background: #2d3a4a;
+    color: #fff;
     text-align: center;
     justify-content: center;
     padding: 20px 0 12px 0;
     margin-top: 40px;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+}
+
+.rodape__texto {
+    margin: 0;
     font-size: 1em;
     letter-spacing: 0.5px;
 }
